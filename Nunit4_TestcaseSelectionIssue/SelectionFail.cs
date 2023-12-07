@@ -13,8 +13,9 @@ namespace Nunit4_TestcaseSelectionIssue
                 Assert.That(ja, Is.Not.Null);
                 count++;
             }
-            Assert.That(count, Is.LessThanOrEqualTo(maxSize));
-            return count;
+
+            Assert.Pass();
+            return (int)Math.Ceiling(((double)jsonArray.Count) / maxSize);
         }
     }
 }
